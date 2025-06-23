@@ -1,0 +1,40 @@
+Program: Count Even and Odd Numbers in an Array
+This Java program reads an array of integers from the user and counts the number of even and odd elements in it.
+
+import java.util.*;
+public class Countevenodd {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n =sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter array elements: ");
+		for(int i=0;i<n;i++) {
+			arr[i] = sc.nextInt();
+		}
+		int c_e = 0;
+		int c_o = 0;
+		for(int i=0;i<n;i++) {
+			if(arr[i]%2 == 0) {
+				c_e++;
+			}
+			else {
+				c_o++;
+			}
+		}
+		System.out.println("No.of of even numbers: "+c_e);
+		System.out.println("No.of of even numbers: "+c_o);
+	}
+
+}
+
+
+Sample Input/Output:
+Enter size of array: 
+6
+Enter array elements: 
+1 2 3 4 5 6
+No.of of even numbers: 3
+No.of of even numbers: 3
