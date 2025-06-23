@@ -1,0 +1,64 @@
+Program: Concatenate Two Arrays Without Using Inbuilt Methods in Java
+This Java program demonstrates how to concatenate two integer arrays manually without using any built-in methods like System.arraycopy() or Arrays.copyOf().
+
+
+import java.util.*;
+public class Concat2arrays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Size of first array: ");
+		int a = sc.nextInt();
+		int[] arr = new int[a];
+		System.out.println("Enter first array elements");
+		for(int i=0;i<a;i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.println("Size of second array: ");
+		int b = sc.nextInt();
+		int[] brr = new int[b];
+		System.out.println("Enter second array elements");
+		for(int j=0;j<b;j++) {
+			brr[j] = sc.nextInt();
+		}
+		int[] crr = new int[a+b];
+		int index = 0;
+		for(int i=0;i<a;i++) {
+			crr[index] = arr[i];
+			index++;
+		}
+		for(int i=0;i<b;i++) {
+			crr[index] = brr[i];
+			index++;
+			
+		}
+		System.out.println("Concatenated array: ");
+		for(int j=0;j<crr.length;j++) {
+			System.out.print(+crr[j]+" ");
+		}
+	}
+
+}
+
+Sample Input/Output:
+
+Size of first array: 
+3
+Enter first array elements
+1 2 3
+Size of second array: 
+2
+Enter second array elements
+4 5
+Concatenated array: 
+1 2 3 4 5 
+
+Description:
+Takes user input for the size and elements of two arrays.
+
+Creates a third array with a size equal to the sum of both input arrays.
+
+Copies the elements of the first and second arrays into the third one using simple for loops.
+
+Displays the concatenated array as output.
