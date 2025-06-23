@@ -1,0 +1,31 @@
+Program: Find Size of Array using foreach Loop in Java
+This Java program demonstrates how to calculate the size of an array using a foreach (enhanced for) loop, without relying on the built-in .length property.
+
+import java.util.*;
+public class Foreach_size {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {1, 2, 3, 4, 5, 6};
+		int count = 0;
+		for(int num : arr) {
+			count++;
+		}
+		System.out.println(count);
+		
+
+	}
+
+}
+
+🔍 Description:
+Initializes an integer array with predefined values.
+
+Uses a foreach loop to iterate through each element.
+
+Increments a counter during each iteration to determine the array size.
+
+Prints the final size of the array.
+
+🧾 Output:
+6
