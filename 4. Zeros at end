@@ -1,0 +1,42 @@
+Program: Move All 0's to the End of an Array in Java
+This Java program reads an array of integers from user input and rearranges the elements so that all 0s are moved to the end of the array, while preserving the order of non-zero elements.
+
+
+import java.util.*;
+public class Zerosatend {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc =  new Scanner(System.in);
+		System.out.println("Enter size of array: ");
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter array elements: ");
+		for(int i=0;i<n;i++) {
+			arr[i] = sc.nextInt();
+		}
+		int[] result = new int[n];
+		int index = 0;
+		for(int i=0;i<n;i++) {
+			if(arr[i] != 0) {
+				result[index] = arr[i];
+				index ++;			}
+		}
+		for(int i=0;i<n;i++) {
+			System.out.print(result[i]+" ");
+		}
+		
+
+	}
+
+}
+
+
+Sample Input:
+Enter size of array: 
+7
+Enter array elements: 
+0 1 0 2 3 0 4
+Output:
+1 2 3 4 0 0 0 
+
