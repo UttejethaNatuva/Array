@@ -1,0 +1,49 @@
+Program: Move All 0's to the Beginning of an Array in Java
+This Java program takes an array of integers from the user and rearranges it so that all 0 elements are moved to the beginning of the array, while maintaining the order of non-zero elements.
+
+import java.util.*;
+public class Zerosatfirst {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		for(int i=0;i<n;i++) {
+			arr[i] = sc.nextInt();
+		}
+		int[] result = new int[n];
+		int index = n-1;
+		for(int i=n-1;i>=0;i--) {
+			if(arr[i] != 0) {
+				result[index] = arr[i];
+				index--;
+			}
+		}
+		System.out.println("Sorted array with 0's at beginning: ");
+		for(int i=0;i<n;i++) {
+			System.out.print(result[i]+" ");
+		}
+
+	}
+
+}
+
+Sample Input:
+7
+1 0 2 0 3 4 0
+
+🧾 Output:
+Sorted array with 0's at beginning: 
+0 0 0 1 2 3 4 
+
+Description:
+Accepts the size and elements of the array from the user.
+
+Traverses the array from the end and places all non-zero elements at the end of a new result array.
+
+All other positions (not filled with non-zero values) remain 0, effectively moving all 0s to the front.
+
+Displays the rearranged array with all 0s at the beginning.
+
+
