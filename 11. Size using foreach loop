@@ -13,7 +13,6 @@ public class Foreach_size {
 		}
 		System.out.println(count);
 		
-
 	}
 
 }
